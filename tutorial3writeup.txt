@@ -1,0 +1,25 @@
+Write-up (Aldo Bagus Eryanto 1606839164)
+
+Pertanyaan 1 : localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+> Tidak error karena parameter lengkao
+
+Pertanyaan 2 : localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono
+> Error karena parameter tidak lengkap dimana semua parameter seharusnya wajib ada yang ditandakan dengan required=true
+
+Pertanyaan 3 : localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+	       localhost:8080/pilot/view?licenseNumber=1234
+
+> Data pilot muncul
+
+Pertanyaan 4 : localhost:8080/pilot/view?licenseNumber=1234
+> Data pilot tidak muncul, karena ketika program dimatikan dan dilakukan restart kembali
+
+Pertanyaan 5: localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+	      localhost:8080/pilot/viewall
+
+>Data pilot muncul
+
+Pertanyaan 6 : tambahkan data Pilot lainnya dengan NPM yang berbeda, lalu
+	       localhost:8080/pilot/viewall
+
+> muncul semua data pilot yang telah ditambahkan, terutut kebawah.
